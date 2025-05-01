@@ -1,0 +1,4 @@
+- Her türlü veri ile çalışabilmek için ASM ve C tarafında güncellemeye hazır olabiliriz.
+- Veri biçimlendirmeyi otomatik hale getirebiliriz.
+- Kesme mekanizması eklemek faydalı olacaktır.
+- Hata işleme gerekiyor.

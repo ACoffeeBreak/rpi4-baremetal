@@ -1,0 +1,10 @@
+; Accessing GPIO Pins
+
+GPIOSEL0 - 0-9
+GPIOSEL1 - 10-19
+GPIOSEL2 - 20-29
+GPIOSEL3 - 30-39
+
+; Set GPIO Pin
+
+bic x0, x0, #(0b111 << (GPIO_PIN % 10)*3)

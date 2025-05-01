@@ -1,0 +1,3 @@
+Differences   | Sensibility | Interrupt Support | Control
+System Timer: | 1  microsec |      Limited      |justread    
+ARM Timer:    |programmable |     Advanced      |st/e/res
