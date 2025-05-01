@@ -1,5 +1,5 @@
-# Ongoing Project:
-### Raspberry Pi 4-B Bare-Metal
+### Ongoing Project:
+# Raspberry Pi 4-B Bare-Metal
 
 Hello, this is a low-level bootloader project aiming to create a bridge between physical devices and IDEs.
 
