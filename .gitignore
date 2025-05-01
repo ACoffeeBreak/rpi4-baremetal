@@ -1,0 +1,56 @@
+# Build outputs
+/build/
+*.i
+*.ii
+*.s
+*.o
+*.elf
+*.bin
+*.map
+*.d
+*.lst
+*.hex
+*.axf
+*.crf
+
+# Additional GCC/Clang artifacts
+*.dwo
+
+# Build systems
+Makefile
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+meson-logs/
+meson-private/
+obj/
+out/
+output/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*~
+*.bak
+*.tmp
+*.user  # Qt Creator user settings
+*.cproject  # Eclipse project settings
+*.project  # Eclipse project settings
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.trace
+*.debug
+
+# Debug symbols
+*.dSYM/
+*.pdb  # Windows debug symbols
+
+# Flash tools
+*.cfg  # OpenOCD config files (if not part of the repo)
+*.log  # Logs from flashing tools
