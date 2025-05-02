@@ -1,8 +1,9 @@
 .section ".text.boot"
 
 .global _start
-
 _start:
+
+;;;;; _starts_ [SERVICE](CORE MANAGE) ;;;;;
     mrs x0, mpidr_el1
     and x0, x0, #3
     cbz x0, core_start
@@ -12,6 +13,9 @@ halt_cpu:
     b halt_cpu
 
 core_start:
+;;;;; _ends_ [SERVICE](CORE MANAGE) ;;;;;
+
+;;;;; _starts_ [SERVICE](CLEANING AGENT) ;;;;;
     ldr x1, =0x801000
     mov sp, x1
 
@@ -33,7 +37,10 @@ check_remainder:
     cbz x5, start_main
     str xzr, [x2], #1
     cbnz x5, check_remainder
+;;;;; _ends_ [SERVICE](CLEANING AGENT) ;;;;;
 
+;;;;; _starts_ [SERVICE](SYSTEM LAUNCH) ;;;;;
 start_main:
     bl main
     b halt_cpu
+;;;;; _ends_ [SERVICE](SYSTEM LAUNCH) ;;;;;
