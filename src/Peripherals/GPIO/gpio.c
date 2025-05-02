@@ -1,3 +1,4 @@
+// User-defined Libraries
 #include "gpio.h"
 
 extern void gpio_enable(void);
@@ -10,7 +11,6 @@ void sends_gpio(char c) {
 }
 
 void receives_gpio() {
-    // Just gpio gets? void -> char for function, for systems.
     char c = gpio_get();
     sends_gpio(c);
 }
