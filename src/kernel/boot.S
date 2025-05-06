@@ -3,7 +3,7 @@
 .global _start
 _start:
 
-;;;;; _starts_ [SERVICE](CORE MANAGE) ;;;;;
+/* === _BEGIN_ === CORE MANAGE ========== [T-SERVICE] */
     mrs x0, mpidr_el1
     and x0, x0, #3
     cbz x0, core_start
@@ -13,9 +13,9 @@ halt_cpu:
     b halt_cpu
 
 core_start:
-;;;;; _ends_ [SERVICE](CORE MANAGE) ;;;;;
+/* === _END_ === CORE MANAGE */
 
-;;;;; _starts_ [SERVICE](CLEANING AGENT) ;;;;;
+/* === _BEGIN_ === CLEAN AGENT ========== [T-SERVICE] */
     ldr x1, =0x801000
     mov sp, x1
 
@@ -37,10 +37,10 @@ check_remainder:
     cbz x5, start_main
     str xzr, [x2], #1
     cbnz x5, check_remainder
-;;;;; _ends_ [SERVICE](CLEANING AGENT) ;;;;;
+/* === _END_ === CLEAN AGENT */
 
-;;;;; _starts_ [SERVICE](SYSTEM LAUNCH) ;;;;;
+/* === _BEGIN_ === SYSTEM LAUNCH ========== [SERVICE] */
 start_main:
     bl main
     b halt_cpu
-;;;;; _ends_ [SERVICE](SYSTEM LAUNCH) ;;;;;
+/* _END_ === SYSTEM LAUNCH */
