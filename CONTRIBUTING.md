@@ -5,7 +5,7 @@
 
 Your commit message should follow this structure:
 (Add headers to the message.)
-
+> 🔵 You are not required to use labels that are unnecessary.
 ```
 # Summary of Changes
 "..."
